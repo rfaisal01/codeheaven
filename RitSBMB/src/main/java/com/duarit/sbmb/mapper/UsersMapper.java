@@ -20,6 +20,6 @@ public interface UsersMapper {
 	List<Users> findByName(@Param("name") String name);
 	
 	
-	@Insert("INSERT INTO users (id,name, salary) values(LAST_INSERT_ID(),#{name},#{salary})")
+	@Insert("INSERT INTO Users (id,name, salary) values(#{id},#{name},#{salary})")
 	void insertUsers(Users u);
 }
